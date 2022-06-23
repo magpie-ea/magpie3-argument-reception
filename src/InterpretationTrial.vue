@@ -17,10 +17,13 @@
       <!--   @update:response="$magpie.saveAndNextScreen()" -->
       <!-- /> -->
 
-     <div style="color: gray;">
-       {{item.statement}}
-                 </div>
-      
+      <p>You received the following statement:</p>
+      <div style="color: darkred">
+        <strong>{{ item.statement }}</strong>
+      </div>
+      <p>How likely is this statement to come from...?</p>
+  <br />
+
       <p>
         <strong>a friend who read a lot of reviews</strong> ({{
           showPercentage(
