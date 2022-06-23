@@ -18,7 +18,7 @@
       <!-- /> -->
 
      <div style="color: gray;">
-       {{item.statementAnswerCertainty}}
+       {{item.statement}}
                  </div>
       
       <p>

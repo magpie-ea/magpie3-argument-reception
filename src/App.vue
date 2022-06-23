@@ -12,11 +12,32 @@
     </InstructionScreen>
 
     <InstructionScreen :title="'General Instructions'">
-      This is a sample instructions view.
+      Imagine that you consider buying a new TV set for your house.
+      You found a candidate that caught your attention, but you are unsure whether it is any good.
       <br />
       <br />
-      First you will go through two practice trials. The practice trial view
-      uses magpie's forced choice trial input.
+      Now imagine that a person tells you something about the reviews they read online for exactly this TV set, but you do not know exactly who told you this.
+      The message could have come from a friend or a seller.
+      A friend would just like to help you make a good decision.
+      A seller might either try to sell you this particular product or another one without necessarily caring about what you care about.
+      Moreover, the person giving you this statement may have exhaustively studied the reviews, or just browsed them very briefly.
+      You are supposed to guess, who is most likely to have given you a particular statement in a situation like this.
+      <br />
+      <br />
+      For example, the person may have told you that:
+      <div style="color: gray;">
+        "Some reviews are positive but most are negative."
+      </div>
+      Now you should indicate how likely (relative to each other) it is that this statement came from:
+      <ol>
+        <li>a friend who read a lot of reviews</li>
+        <li>a friend who did not read many reviews</li>
+        <li>a seller who read a lot of reviews</li>
+        <li>a seller who did not read many of reviews</li>
+      </ol>
+      <br />
+      <br />
+      You can express the (relative) likelihood using sliders.
     </InstructionScreen>
 
     <template v-for="(trial, i) in items">
