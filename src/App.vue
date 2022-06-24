@@ -1,7 +1,7 @@
 <template>
   <Experiment title="Who said this? - Experiment">
     <InstructionScreen :title="'Welcome'">
-      This experiment consists of 10 statements, which you are supposed to read
+      This experiment consists of 12 statements, which you are supposed to read
       and interpret.
       <br />
       <br />
@@ -81,7 +81,7 @@ export default {
   },
   data() {
     return {
-      items: interpretation_stimuli,
+      items: _.shuffle(interpretation_stimuli),
       group: group,
       // Expose lodash.range to template above
       range: _.range

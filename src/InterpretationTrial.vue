@@ -5,27 +5,34 @@
       <Record
         :data="{
           trialNr: trialNR + 1,
+          statement: item.statement,
+          itemID: item.itemID,
+          noun: item.noun,
+          predicate: item.predicate,
           statement: item.statement
         }"
       />
 
-      <!-- <KeypressInput -->
-      <!--   :response.sync="$magpie.measurements.launch" -->
-      <!--   :keys="{ -->
-      <!--     '~': 'next' -->
-      <!--   }" -->
-      <!--   @update:response="$magpie.saveAndNextScreen()" -->
-      <!-- /> -->
+      <div style="color: lightgreen">For debugging: quick forward with '~'.</div>
+
+      <KeypressInput
+        :response.sync="$magpie.measurements.launch"
+        :keys="{
+          '~': 'next'
+        }"
+        :showOptions='false'
+        @update:response="$magpie.saveAndNextScreen()"
+      />
 
       <p>You received the following statement:</p>
       <div style="color: darkred">
         <strong>{{ item.statement }}</strong>
       </div>
       <p>How likely is this statement to come from...?</p>
-  <br />
+      <br />
 
       <p>
-        <strong>a friend who read a lot of reviews</strong> ({{
+        a <strong>friend</strong> who read <strong>a lot</strong> of reviews ({{
           showPercentage(
             $magpie.measurements.competentFriend,
             $magpie.measurements.incompetentFriend,
@@ -42,7 +49,8 @@
       />
 
       <p>
-        <strong>a friend who did not read many reviews</strong> ({{
+        a <strong>friend</strong> who read <strong>just a few</strong> reviews
+        ({{
           showPercentage(
             $magpie.measurements.incompetentFriend,
             $magpie.measurements.competentFriend,
@@ -59,7 +67,7 @@
       />
 
       <p>
-        <strong>a seller who read a lot of reviews</strong> ({{
+        a <strong>seller</strong> who read <strong>a lot</strong> of reviews ({{
           showPercentage(
             $magpie.measurements.competentSeller,
             $magpie.measurements.incompetentFriend,
@@ -76,7 +84,8 @@
       />
 
       <p>
-        <strong>a seller who did not read many reviews</strong> ({{
+        a <strong>seller</strong> who read <strong>just a few</strong> reviews
+        ({{
           showPercentage(
             $magpie.measurements.incompetentSeller,
             $magpie.measurements.competentFriend,

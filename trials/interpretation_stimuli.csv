@@ -1,2 +1,13 @@
-statement
-User 'MyOpinionRocks-1984' gave 5 stars (out of 5).
+itemID,noun      ,predicate ,statement
+1     ,individual,precise   ,User 'MyOpinionRocks-1984' gave 5 stars (out of 5).
+2     ,individual,atLeast   ,User 'Broken:Banana' gave at least 3 stars (out of 5).
+3     ,individual,evaluative,User 'AlienSpaceCat' recommends the product.
+4     ,many      ,precise   ,Many users gave 5 stars (out of 5).
+5     ,many      ,atleast   ,Many users gave at least 3 stars (out of 5).
+6     ,many      ,evaluative,Many users recommend the product.
+7     ,most      ,precise   ,Most users gave 5 stars (out of 5).
+8     ,most      ,atleast   ,Most users gave at least 3 stars (out of 5).
+9     ,most      ,evaluative,Most users recommend the product.
+10    ,average   ,precise   ,The average customer rating is 4.6 stars (out of 5).
+11    ,average   ,atleast   ,The average customer rating is at least 3 stars (out of 5).
+12    ,average   ,atleast   ,The average customer rating is positive.
